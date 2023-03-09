@@ -1,0 +1,164 @@
+html,
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1F2937;
+  color: #D5D4D8;
+}
+
+/* font styling */
+
+h1 {
+    font-weight: 500;
+}
+
+/* layout styling */
+
+header,
+main {
+  margin: auto;
+  max-width: 650px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+/* form and inputs styling */
+
+form {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+input,
+select,
+button {
+  height: 50px;
+  align-items: center;
+}
+
+input {
+  width: 61px;
+}
+
+select {
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: #D5D4D8;
+  flex-grow: 1;
+}
+
+select,
+button {
+  padding: .75rem;
+  border-radius: 6px;
+}
+
+button {
+  font-size: 0.75rem;
+  border: none;
+  color: white;
+  background-color: #3D4B60;
+}
+
+button:hover,
+.generate-hex:hover {
+  background-color: #505d70;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* colors container layout styling */
+
+.colors-container,
+.generate-color,
+.generate-hex {
+  border: 1px solid rgba(213, 212, 216, 0.5);
+}
+
+.colors-container {
+  border-radius: 6px;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.generate-color {
+  display: flex;
+  height: 50vh;
+  max-height: 500px;
+  grid-row-start: 1;
+  flex-wrap: wrap;
+}
+
+.generate-hex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  letter-spacing: 1px;
+  height: 50px;
+  grid-row-end: 6;
+}
+
+/* utilities */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+    header,
+    main {
+        margin: auto;
+        max-width: 90%;
+    }
+    
+    .generate-hex:hover {
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+  .colors-container {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .color-wrapper {
+      position: relative;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%; 
+  }
+  
+  .generate-color {
+      display: flex;
+      height: 100px; 
+      flex-wrap: wrap;
+      width: 100%;
+  }
+  
+  .generate-hex {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0; 
+      right: 0;
+      margin: auto;
+      display: flex;
+      border: none;
+  }
+}

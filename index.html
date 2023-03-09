@@ -1,0 +1,35 @@
+<html>
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<header>
+		<h1>Scrimba Color Scheme Generator</h1>
+	</header>
+	<main>
+		<section class="form-container">
+			<form id="color-picker">
+				<label for="color-input" class="visuallyhidden">Select a color:</label>
+				<input type="color" id="color-input" name="color-input" value="#1353B4"/>
+				<label for="scheme-select" class="visuallyhidden">Select a color scheme:</label>
+				<select name="scheme-select" id="scheme-select" form="color-picker">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome-dark</option>
+                    <option value="monochrome-light">Monochrome-light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-complement</option>
+                    <option value="triad">Triad</option>
+                </select>
+				<button>Get Color Scheme</button>
+			</form>
+		</section>
+		<section class="colors-container" id="colors-container"></section>
+	</main>
+	<script src="index.js" type="module"></script>
+</body>
+
+</html>

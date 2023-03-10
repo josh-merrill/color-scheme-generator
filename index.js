@@ -41,7 +41,5 @@ form.addEventListener("submit", function (e) {
         .then(data => {
             colorsArray = data.colors
             renderColors()
- 
-            // form.reset() - TBD
         })
 })

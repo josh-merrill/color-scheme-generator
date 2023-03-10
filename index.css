@@ -30,8 +30,14 @@ header {
 
 form {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.color-input-wrapper {
+    display: flex;
+    gap: 1rem;
 }
 
 input,

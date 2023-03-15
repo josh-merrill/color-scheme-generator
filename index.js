@@ -6,7 +6,6 @@ const colorInput = document.getElementById('color-input')
 const generateRandomColor = (Math.random()*0xFFFFFF<<0).toString(16)
 
 // Fetch colors and update colorInput with random color value
-// Question: Is this the best way to set the color input's value? I know each function is supposed to handle one thing, and this handles two things (fetches the colors and then update the color input value). Is there a better way to do this?
 function fetchColors(url){
     fetch(url)
         .then(res => res.json())

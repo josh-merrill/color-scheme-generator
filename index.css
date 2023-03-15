@@ -1,82 +1,76 @@
 html,
 body {
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #1f2937;
-  color: #d5d4d8;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1F2937;
+    color: #D5D4D8;
 }
 
 /* font styling */
 
 h1 {
-  font-weight: 500;
-  text-align: center;
+    font-weight: 500;
+    text-align: center;
 }
 
 /* layout styling */
 
 header,
 main {
-  margin: auto;
-  max-width: 800px;
-}
-
-header {
-  display: flex;
-  justify-content: center;
+    margin: auto;
+    max-width: 650px;
 }
 
 /* form and inputs styling */
 
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
-
 .color-input-wrapper {
     display: flex;
-    gap: 1rem;
+    gap: 1em;
 }
 
 input,
 select,
 button {
-  height: 50px;
-  align-items: center;
+    height: 3em;
+    align-items: center;
 }
 
 input {
-  width: 61px;
+    width: 3.75em;
 }
 
 select {
-  letter-spacing: 1px;
-  background-color: transparent;
-  color: #d5d4d8;
-  flex-grow: 1;
+    letter-spacing: 1px;
+    background-color: transparent;
+    color: #D5D4D8;
+    flex-grow: 1;
 }
 
 select,
 button {
-  padding: 0.75rem;
-  border-radius: 6px;
+    padding: .75rem;
+    border-radius: 6px;
 }
 
 button {
-  font-size: 0.75rem;
-  border: none;
-  color: white;
-  background-color: #3d4b60;
+    font-size: 0.75rem;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+    background-color: #3D4B60;
 }
 
 button:hover,
 .generate-hex:hover {
-  background-color: #505d70;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+    background-color: #505d70;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 /* colors container layout styling */
@@ -84,87 +78,80 @@ button:hover,
 .colors-container,
 .generate-color,
 .generate-hex {
-  border: 1px solid rgba(213, 212, 216, 0.5);
+    border: 1px solid rgba(213, 212, 216, 0.5);
 }
 
 .colors-container {
-  border-radius: 6px;
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+    border-radius: 6px;
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .generate-color {
-  display: flex;
-  height: 60vh;
-  grid-row-start: 1;
-  flex-wrap: wrap;
+    height: 50vh;
 }
 
 .generate-hex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 100;
-  letter-spacing: 1px;
-  height: 5vh;
-  grid-row-end: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    height: 10vh;
 }
 
-/* utilities */
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+.selection-instruction {
+    padding: 2rem;
+    text-align: center;
 }
 
 /* media queries */
 
 @media screen and (max-width: 768px) {
-  header,
-  main {
-    margin: auto;
-    max-width: 90%;
-  }
-
-  .generate-hex:hover {
-    background-color: transparent;
-    cursor: pointer;
-  }
+    header,
+    main {
+        margin: auto;
+        max-width: 90%;
+    }
 
   .colors-container {
-    display: flex;
-    flex-direction: column;
+      display: flex;
+      flex-direction: column;
   }
 
+    .generate-hex:hover {
+        background-color: transparent;
+        cursor: pointer;
+    }
+
   .color-wrapper {
-    position: relative;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
+      position: relative;
   }
 
   .generate-color {
-    display: flex;
-    height: 100px;
-    flex-wrap: wrap;
-    width: 100%;
+      height: 6.25em;
   }
 
   .generate-hex {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: flex;
-    border: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border: none;
   }
+}
+
+/* utilities */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
